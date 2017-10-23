@@ -90,7 +90,7 @@ function doGameOver(): void {
 		removeChild(finalExplosion);
 		addChild(lGameOverScreen = new GameOverScreen());
 		lGameOverScreen.txtScore.text = "SCORE : " + score;
-		lGameOverScreen.txtScore.text = "HIGH SCORE : " + sharedData.data.highScore;
+		lGameOverScreen.txtHighScore.text = "HIGH SCORE : " + sharedData.data.highScore;
 		sharedData.flush();
 		removeEventListener(Event.ENTER_FRAME, gameLoop);
 	}
